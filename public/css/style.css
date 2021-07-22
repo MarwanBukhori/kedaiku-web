@@ -1,0 +1,12 @@
+.hero-area {
+    padding-top: 80px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: #ffffff;
+    min-height: 300px;
+}
+
+footer {
+    background-color: rgb(93, 93, 93);
+    color: #ffffff;
+}
