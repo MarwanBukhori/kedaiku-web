@@ -42,11 +42,11 @@ class Home extends BaseController
 			
 		]; */
 		$db = db_connect();
-		$result = $db -> query('SELECT * FROM gambar');
+		$result = $db -> query('SELECT * FROM gambar ORDER BY nama desc');
 		$all_pekan = $result -> getResult();
 
 		#debug and die
-		dd( $all_pekan );
+		#dd( $all_pekan );
 
 		return view('homepage', [ 'all_pekan' => $all_pekan] ); 
 	}

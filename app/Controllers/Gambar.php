@@ -6,7 +6,13 @@ class Gambar extends BaseController
 {
 	public function index()
 	{
-		echo "<h1>Kita akan keluarkan senarai</h1>";
+		#echo "<h1>Kita akan keluarkan senarai</h1>";
+		$gambar_model = new \App\Models\GambarModel();
+		$gambar = $gambar_model->findAll();
+		
+		
+
+		return view('admin/listing',['gambar'=> $gambar]);
 	}
 
 	function edit(){
