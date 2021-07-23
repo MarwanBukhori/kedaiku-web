@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-          <img src="img/logo-120.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <img src="/img/logo-120.png" width="30" height="30" class="d-inline-block align-top" alt="">
           KelasProgramming.com
         </a>
       </nav> 
@@ -24,7 +24,7 @@
       <div class="container mt-5">
           <div class="row">
               <div class="col-12">
-                <button class="btn btn-sm btn-success float-right">Add New</button>
+                <a href="/gambar/add" class="btn btn-sm btn-success float-right">Add New</a>
                 <h3>Senarai Gambar</h3>
               </div>
 
@@ -51,8 +51,8 @@
                             <?= $g['nama'] ?>
                             </td>
                             <td>
-                                <button class="btn btn-sm btn-primary">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
+                                <a href="/gambar/edit/<?= $g['id']; ?>" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="/gambar/delete/<?= $g['id']; ?>" class="btn btn-sm btn-danger">Delete</a>
 
                             </td>
                         </tr>

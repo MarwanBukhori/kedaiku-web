@@ -96,7 +96,7 @@
 </div><!-- /container -->
 
 <footer class="text-center p-5">
-<p>Hakcipta terpelihara &copy; 2021</p>
+<p>Hakcipta terpelihara marwanbukhori&copy; 2021</p>
 
 </footer>
     

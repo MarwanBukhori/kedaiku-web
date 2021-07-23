@@ -20,7 +20,42 @@ class Gambar extends BaseController
 	}
 
 	function add(){
-		echo "<h1>Borang untuk add di sini</h1>";
+		helper('form');
+		return view('admin/add');
+		
+	}
+	
+	//save data dari add new form
+	function save_new(){	
+		$gambar_model = new \App\Models\GambarModel();
+		
+
+		$name = $this->request->getPost('nama');
+		$keterangan = $this->request->getPost('keterangan');
+
+		$data = [
+			'nama' => $this->request->getPost('nama'),
+			'keterangan' => $this->request ->getPost('keterangan')
+		];
+		
+
+		$file = $this->request->getFile('nama_fail');
+		// Grab the file by name given in HTML form
+	if ($file)
+	{
+
+    // Generate a new secure name
+    $nama_fail = $file->getRandomName();
+
+    // Move the file to it's new home
+    $file->move('img/', $nama_fail);
+	$data['nama_fail'] = $nama_fail;
+
+    }
+
+	$gambar_model->insert($data);
+		#echo "<h1>Hello......saya hensem</h1>";
+		
 	}
 
 }
